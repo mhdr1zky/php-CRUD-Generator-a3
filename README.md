@@ -1,5 +1,5 @@
 # php-CRUD-Generator-Admin Lte3
-
+this may be out of date but still many use i modified it with good ui , it can be faster to make nari application native php
 ## How to use
 
 ```
