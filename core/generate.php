@@ -10,10 +10,10 @@ if(isset($_POST['genConf'])){
   $urlBase = $_POST['baseurl'];
   if(!empty($host) || !empty($dbUser) || !empty($dbName) || !empty($dbPassword)){
     gen_conn($host,$dbUser,$dbName,$dbPassword,$urlBase);
-    header("Location: ../");
+    header("Location: ../generate.php");
   }
   else{
-    header("Location: ../");
+    header("Location: ../generate.php");
   }
 
 }
@@ -33,12 +33,15 @@ else if(isset($_POST['generate'])){
     require_once 'edit_generate.php';
     gen_edit($table);
 
-    header("Location: ../index.php");
+    header("Location: ../generate.php");
   }
   else{
-    header("Location: ../index.php");
+    header("Location: ../generate.php");
   }
 
+}
+if(isset($_POST['reset'])){
+  
 }
 else if(isset($_POST['all'])){
   $Table = Table();
@@ -58,6 +61,6 @@ else if(isset($_POST['all'])){
     gen_edit($table);
 
   }
-  header("Location: ../index.php");
+  header("Location: ../generate.php");
 }
 ?>

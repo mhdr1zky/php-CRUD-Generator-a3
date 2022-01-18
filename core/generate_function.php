@@ -2,7 +2,7 @@
 function gen_func($table){
 $pf = PrimaryField($table);
 $string .= "<?php
-session_start();
+
 require_once '../config/conn.php';
 
 function GetAll(){
@@ -112,6 +112,44 @@ function Delete(\$id){
 }
 
 ";
+
+
+
+
+$string .="
+function Duplicate(\$id){
+    \$one = GetOne(\$id);
+  ";
+$nopf = NoPrimaryField($table);
+foreach($nopf as $fieldName){
+  $string .="\$".$fieldName['column_name']."=\$one[0][\"".$fieldName['column_name']."\"]; \n\t\t";
+}
+$string .="
+   \$query = \"INSERT INTO `$table` (";
+foreach($nopf as $fieldName){
+   $string .="`".$fieldName['column_name']."`,";
+}
+$string .=")
+VALUES (";
+foreach($nopf as $fieldName){
+  $string .="'\$".$fieldName['column_name']."',";
+}
+
+$string .=")\";
+\$exe = mysqli_query(Connect(),\$query);
+  if(\$exe){
+    // kalau berhasil
+    \$_SESSION['message'] = \" Data Sudah disimpan \";
+    \$_SESSION['mType'] = \"success \";
+    header(\"Location: index.php\");
+  }
+  else{
+    \$_SESSION['message'] = \" Data Gagal disimpan \";
+    \$_SESSION['mType'] = \"danger \";
+    header(\"Location: index.php\");
+  }
+}";
+
 $string .="
 if(isset(\$_POST['insert'])){
   Insert();
@@ -121,6 +159,9 @@ else if(isset(\$_POST['update'])){
 }
 else if(isset(\$_POST['delete'])){
   Delete(\$_POST['$pf']);
+}
+else if(isset(\$_POST['duplicate'])){
+  Duplicate(\$_POST['$pf']);
 }
 ?>
 ";

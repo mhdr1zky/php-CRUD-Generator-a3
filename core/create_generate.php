@@ -1,31 +1,22 @@
 <?php
 function gen_create($table){
 $string .= "
-<?php
-require_once 'func.php';
-?>
-<!DOCTYPE html>
-<html lang=\"en\">
-  <head>
-    <meta charset=\"utf-8\">
-    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <title> Read $table </title>
-    <link rel=\"stylesheet\" href=\"<?php echo BASE_URL; ?>/bootstrap-3.3.7-dist/css/bootstrap.min.css\" >
-    <link rel=\"stylesheet\" href=\"<?php echo BASE_URL; ?>/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css\">
-    <link rel=\"stylesheet\" href=\"<?php echo BASE_URL; ?>/bootstrap-3.3.7-dist/css/jumbotron-narrow.css\">
-    <script src=\"<?php echo BASE_URL; ?>/bootstrap-3.3.7-dist/js/jquery.min.js\"></script>
-    <script src=\"<?php echo BASE_URL; ?>/bootstrap-3.3.7-dist/js/bootstrap.min.js\"></script>
-  </head>
 
-  <body>
-    <div class='container'>
-      <div class='col-sm-1'></div>
-      <div class='col-sm-10'>
-        <div class='panel panel-info'>
-          <div class='panel-heading'>Form Input $table </div>
-          <div class='panel-body'>
-          <form action='func.php' method='POST'>
+  <button type='button' class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#modal_create\">
+                  Tambah Data
+                </button>
+
+<div class=\"modal fade\" id=\"modal_create\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modal_createLabel\" aria-hidden=\"true\">
+  <div class=\"modal-dialog\" role=\"document\">
+    <div class=\"modal-content\">
+      <div class=\"modal-header\">
+        <h5 class=\"modal-title\" id=\"modal_createLabel\">Tambah Data</h5>
+        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+          <span aria-hidden=\"true\">&times;</span>
+        </button>
+      </div>
+      <div class=\"modal-body\">
+           <form action='func.php' method='POST'>
           ";
             $nopf = NoPrimaryField($table);
             foreach($nopf as $field){
@@ -33,17 +24,20 @@ require_once 'func.php';
               <div class=\"form-group\">
                 <label for=\"".$field['column_name']."\"> ".$field['column_name'].":</label>
                 <input type=\"text\" class=\"form-control\" id=\"".$field['column_name']."\" name='".$field['column_name']."' placeholder='".$field['column_name']."'>
-              </div>";
+              </div>
+              ";
             }
-          $string .= "<input type='submit' name='insert' value='Save' class='btn btn-sm btn-primary'>
-          </form>
-          </div>
-        </div>
+          $string .= "
+</div>
+ <div class=\"modal-footer\">
+        <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
+        <input type='submit' class=\"btn btn-primary\" name='insert' value=\"Save changes\">
+        </form>
       </div>
-      <div class='col-sm-1'></div>
     </div>
-  </body>
-</html>
+  </div>
+</div>
+
 
 ";
 createFile($string, "../".$table."/create.php");
