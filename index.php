@@ -2,6 +2,9 @@
 if (file_exists('config/conn.php')) {
   include_once 'config/conn.php';
 }
+if (!file_exists('config/conn.php')) {
+  header("Location: generate.php");
+}
 require_once 'template/header.php';
 
 if (file_exists('config/conn.php')) {
