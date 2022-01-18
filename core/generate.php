@@ -30,9 +30,6 @@ else if(isset($_POST['generate'])){
     require_once 'create_generate.php';
     gen_create($table);
 
-    require_once 'edit_generate.php';
-    gen_edit($table);
-
     header("Location: ../generate.php");
   }
   else{
@@ -56,9 +53,6 @@ else if(isset($_POST['all'])){
 
     require_once 'create_generate.php';
     gen_create($table);
-
-    require_once 'edit_generate.php';
-    gen_edit($table);
 
   }
   header("Location: ../generate.php");
