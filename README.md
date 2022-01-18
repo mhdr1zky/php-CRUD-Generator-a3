@@ -3,15 +3,15 @@
 
 this may be out of date but still many use i modified it with nice ui , it can be faster to build app from native php, i hope it's useful
 
-DEMO
-![This is an image](https://github.com/mhdr1zky/php-CRUD-Generator-a3/blob/master/screenshot/3.result%20crud%20dashboard.jpg)
-Other Demo :
 
-1.https://github.com/mhdr1zky/php-CRUD-Generator-a3/blob/master/screenshot/1.start%20new%20generator.jpg
-2.https://github.com/mhdr1zky/php-CRUD-Generator-a3/blob/master/screenshot/2.in%20menu%20crud%20gen.jpg
-3.https://github.com/mhdr1zky/php-CRUD-Generator-a3/blob/master/screenshot/3.result%20crud%20dashboard.jpg
-4.https://github.com/mhdr1zky/php-CRUD-Generator-a3/blob/master/screenshot/4.%20modal%20create%20menu.jpg
-5.https://github.com/mhdr1zky/php-CRUD-Generator-a3/blob/master/screenshot/5.modal%20edit%20menu.jpg
+| Step | Thumb                                                                  | Demo |
+| :--: |:----------------------------------------------------------------------:| :------------ |
+|  1   | <a href="screenshot/1.start%20new%20generator.jpg" target="_blank"><img src="screenshot/1.start%20new%20generator.jpg" width="200"></a> | Start New Running |
+|  2   | <a href="screenshot/2.in%20menu%20crud%20gen.jpg" target="_blank"><img src="screenshot/2.in%20menu%20crud%20gen.jpg" width="200"></a> | The Menu Generator |
+|  3   | <a href="screenshot/3.result%20crud%20dashboard.jpg" target="_blank"><img src="screenshot/3.result%20crud%20dashboard.jpg" width="200"></a> | View Result Crud Generator |
+|  4   | <a href="screenshot/4.%20modal%20create%20menu.jpg" target="_blank"><img src="screenshot/4.%20modal%20create%20menu.jpg" width="200"></a> | View Modal Create Menu |
+|  5   | <a href="screenshot/5.modal%20edit%20menu.jpg" target="_blank"><img src="screenshot/5.modal%20edit%20menu.jpg" width="200"></a> | View Modal Edit Menu |
+
 
 ## How to use
 
