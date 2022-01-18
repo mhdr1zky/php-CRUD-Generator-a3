@@ -1,7 +1,9 @@
 <?php 
-//setting ur url Project
-define ("BASE_URL","\lab\php_crudgen_adminlte3");
 
+if (!file_exists('config/conn.php')) {
+  //setting ur url Project
+define ("BASE_URL","./");
+}
 if (file_exists('config/conn.php')) {
   include_once 'config/conn.php';
 }
