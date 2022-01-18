@@ -1,6 +1,7 @@
 # php-CRUD-Generator
 
 ## How to use
+
 a. put the php-Crud-Generator folder on localhost
 B. open localhost/php-Crud-Generator from browser
 C. on the form "create database connection" fill correctly: hostname # usually localhost,
