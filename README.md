@@ -1,4 +1,7 @@
 # php-CRUD-Generator-Admin Lte3
+
+this may be out of date but still many use i modified it with good ui , it can be faster to make nari application native php i hope it's useful
+
 DEMO
 ![This is an image](https://github.com/mhdr1zky/php-CRUD-Generator-a3/blob/master/screenshot/3.result%20crud%20dashboard.jpg)
 Other Demo :
@@ -8,6 +11,7 @@ Other Demo :
 3.https://github.com/mhdr1zky/php-CRUD-Generator-a3/blob/master/screenshot/3.result%20crud%20dashboard.jpg
 4.https://github.com/mhdr1zky/php-CRUD-Generator-a3/blob/master/screenshot/4.%20modal%20create%20menu.jpg
 5.https://github.com/mhdr1zky/php-CRUD-Generator-a3/blob/master/screenshot/5.modal%20edit%20menu.jpg
+
 ## How to use
 
 ```
