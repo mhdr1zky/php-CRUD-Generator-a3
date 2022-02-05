@@ -57,6 +57,6 @@ e. daftar folder yang telah di generate akan muncul pada "Daftar folder"
 9. add Duplicate Function in Crud
 10. Move CRUD Menu in Integration App And Add Reset Settings
 
-##Bugs
+## Bugs
 1.modal not view on mobile mode
 > written with <3 by Me Gandhi Wibowo > Revised By : mhdr1zky
