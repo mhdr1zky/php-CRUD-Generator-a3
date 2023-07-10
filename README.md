@@ -35,7 +35,9 @@ yang di tampilkan pada browser. next klik tombol generate config file
 d. next pilih tabel, dan tekan generate atau bisa langsung menekan generate All
 e. daftar folder yang telah di generate akan muncul pada "Daftar folder"
 ```
-
+f.untuk server linux yang perlu memberikan permision folder ketikan perintah:
+sudo chmod 755 -R php-CRUD-Generator
+sudo chown www-data:nama_user -R php-CRUD-Generator-a3
 ## Cooming Soon
 
 1. Import data From Excel
