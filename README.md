@@ -58,5 +58,5 @@ e. daftar folder yang telah di generate akan muncul pada "Daftar folder"
 10. Move CRUD Menu in Integration App And Add Reset Settings
 
 ## Bugs
-1.modal not view on mobile mode
+1.modal for edit file not view if responsive mode
 > written with <3 by Me Gandhi Wibowo > Revised By : mhdr1zky
